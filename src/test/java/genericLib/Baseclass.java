@@ -41,20 +41,20 @@ Logger log= Logger.getLogger(Baseclass.class);
 //	}
 //}
 
-//@BeforeMethod
-//public void launchApp() throws InterruptedException {
-//	driver= new FirefoxDriver();
-//	driver.get("http://www.cb-india.com/");
-//	driver.manage().window().maximize();
-//	Thread.sleep(3000);
-//	log.info("Lunched the Firefox browser ");
-//}
+@BeforeMethod
+public void launchApp() throws InterruptedException {
+	driver= new FirefoxDriver();
+	driver.get("http://www.cb-india.com/");
+	driver.manage().window().maximize();
+	Thread.sleep(3000);
+	log.info("Lunched the Firefox browser ");
+}
 
-//@AfterMethod
-//public void closeApp() {
-//	driver.close();
-//	System.out.println("Closed the browser");
-//}
+@AfterMethod
+public void closeApp() {
+	driver.close();
+	System.out.println("Closed the browser");
+}
 
 public void objectwait(WebElement wait) {
 	WebDriverWait expwait = new WebDriverWait(driver, 10);
